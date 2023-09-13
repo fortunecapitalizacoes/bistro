@@ -1,17 +1,21 @@
 <h1>Incluir Mesa</h1>
-<div class="example-container" fxLayout="row" fxGap="16px">
-    <mat-form-field>
-        <input matInput placeholder="Nome">
-    </mat-form-field>
-</div>
-<div class="example-container" fxLayout="row" fxGap="16px">
-    <mat-form-field>
-    <mat-select placeholder="Status">
-        <mat-option value="option">Reservada</mat-option>
-        <mat-option value="option">Disponível</mat-option>
-    </mat-select>
-    </mat-form-field>
-</div>
+<form [formGroup]="formulario">
+    <div class="example-container" fxLayout="row" fxGap="16px">
+        <mat-form-field>
+            <input matInput formControlName="nome" placeholder="Nome">
+        </mat-form-field>
+    </div>
+    <div class="example-container" fxLayout="row" fxGap="16px">
+        <mat-form-field>
+        <mat-select formControlName="status" placeholder="Status">
+            <mat-option value="reservado">Reservada</mat-option>
+            <mat-option value="disponivel">Disponível</mat-option>
+            <mat-option value="ocupado">Ocupado</mat-option>
+        </mat-select>
+        </mat-form-field>
+    </div>
+</form>
+
 <button mat-button (click)="incluir()">incluir</button>
-<button mat-button color="warn">Sair</button>
+<button mat-button (click)="closeDialog()" color="warn">Sair</button>
     

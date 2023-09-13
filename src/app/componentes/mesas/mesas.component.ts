@@ -29,13 +29,12 @@ export class MesasComponent implements OnInit{
     this.mesaService.apagarMesa(mesa.id).subscribe(
       () => {
         console.log('Objeto excluído com sucesso');
+        this.atualizarMesas();
       },
       (error) => {
         console.error('Erro ao excluir o objeto', error);
       }
     );
-
-    this.ngOnInit();
   }
 
   item = {
