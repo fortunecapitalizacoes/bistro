@@ -1,0 +1,17 @@
+<h1>Incluir Mesa</h1>
+<div class="example-container" fxLayout="row" fxGap="16px">
+    <mat-form-field>
+        <input matInput placeholder="Nome">
+    </mat-form-field>
+</div>
+<div class="example-container" fxLayout="row" fxGap="16px">
+    <mat-form-field>
+    <mat-select placeholder="Status">
+        <mat-option value="option">Reservada</mat-option>
+        <mat-option value="option">Disponível</mat-option>
+    </mat-select>
+    </mat-form-field>
+</div>
+<button mat-button (click)="incluir()">incluir</button>
+<button mat-button color="warn">Sair</button>
+    

@@ -1,0 +1,50 @@
+.example-card {
+    max-width: 400px;
+  }
+  
+  .back{
+    background-color: rgb(244, 244, 244);
+  }
+
+  .margem-superior {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+
+  .disponivel-font{
+    color: rgb(0, 0, 0);
+  }
+  .disponivel-title{
+    color: rgb(207, 0, 0);
+  }
+  .disponivel-content{
+    background-color: rgb(159, 255, 162);
+  }
+
+  .reservado-font{
+    color: rgb(0, 0, 0);
+  }
+  .reservado-title{
+    color: rgb(207, 0, 0);
+  }
+  .reservado-content{
+    background-color: rgb(237, 255, 100);
+  }
+  
+  .ocupado-font{
+    color: rgb(0, 0, 0);
+  }
+  .ocupado-title{
+    color: rgb(207, 0, 0);
+  }
+  .ocupado-content{
+    background-color: rgb(255, 118, 118);
+  }
+  
