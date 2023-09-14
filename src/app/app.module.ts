@@ -19,6 +19,9 @@ import { MatInputModule } from '@angular/material/input'; // Importe os módulos
 import { MatSelectModule } from '@angular/material/select';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
+import { AbrirComponent } from './componentes/abrir/abrir.component';
+import { FormeAbrirComponent } from './componentes/forme-abrir/forme-abrir.component';
+import { DetalhesComponent } from './componentes/detalhes/detalhes.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { HttpClientModule } from '@angular/common/http';
     MesasComponent,
     MenuComponent,
     PopUpDialogoComponent,
-    FormMesaComponent
+    FormMesaComponent,
+    AbrirComponent,
+    FormeAbrirComponent,
+    DetalhesComponent
   ],
   imports: [
     BrowserModule,

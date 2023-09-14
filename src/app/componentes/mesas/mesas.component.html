@@ -44,11 +44,11 @@
             &nbsp;
         </mat-card-content>
         <mat-card-actions>
-          <!-- <button mat-button>Cancelar</button>
-          <button mat-button>Fechar</button>
-          <button mat-button>Detalhes</button> -->
-          <button mat-button>Abir</button>
-          <button mat-button>Reservar</button>
+          <button *ngIf="mesa.status == 'reservado'" mat-button>Cancelar</button>
+          <button  *ngIf="mesa.status == 'ocupado'" mat-button>Fechar</button>
+          <button  *ngIf="mesa.status == 'ocupado'" mat-button>Detalhes</button>
+          <abrir  *ngIf="mesa.status == 'disponivel' || mesa.status == 'reservado'"></abrir>
+          <button  *ngIf="mesa.status == 'disponivel'" mat-button>Reservar</button>
           <button (click)="delete(mesa)" mat-icon-button aria-label="Example icon button with a vertical three dot icon">
             <mat-icon>delete</mat-icon>
           </button>   

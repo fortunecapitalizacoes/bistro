@@ -1,7 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import { MesaServiceService } from './services/mesa-service.service';
+import { MatDialogRef } from '@angular/material/dialog';
+import { PopUpDialogoComponent } from '../pop-up-dialogo/pop-up-dialogo.component';
+import { DialogService } from '../serice/observador-matdialog-close';
 
 @Component({
   selector: 'mesas',
@@ -11,17 +14,28 @@ import { MesaServiceService } from './services/mesa-service.service';
 export class MesasComponent implements OnInit{
   dados: any;
 
-  constructor(private mesaService: MesaServiceService){}
+  
 
-  ngOnInit(): void {
+  constructor(private mesaService: MesaServiceService, private dialogService: DialogService){}
+
+  public ngOnInit(): void {
     this.atualizarMesas()
   }
 
-  atualizarMesas(){
+
+  public atualizarMesas(){
     this.mesaService.getMesas().subscribe(data => {
       this.dados = data;
     });
   }
+
+  listenToDialog() {
+    this.dialogService.afterClosed().subscribe((result) => {
+      console.log('Dialog foi fechado com resultado:', result);
+
+    });
+  }
+
   
   delete(mesa: any){
    
@@ -54,5 +68,7 @@ export class MesasComponent implements OnInit{
   }
   
 
+
+  
 
 }

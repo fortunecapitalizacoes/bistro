@@ -1,0 +1,13 @@
+.example-container > * {
+
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 100%;
+  }
+
+h1{
+    align-items: center;
+    margin-left: 300px;
+    margin-right: 300px;
+    width: 100px;
+}
